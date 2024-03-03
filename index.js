@@ -1,6 +1,6 @@
-import readJsonFile from "./readJsonFile";
-import generateMarkdown from "./generateMarkdown";
-import writeMarkdownToFile from "./writeMarkdownToFile";
+import readJsonFile from "./readJsonFile.js";
+import generateMarkdown from "./generateMarkdown.js";
+import writeMarkdownToFile from "./writeMarkdownToFile.js";
 
 // Usage
 async function main() {
@@ -14,7 +14,7 @@ async function main() {
       const markdownString = generateMarkdown(data);
       const fileName = "my-favourites-internet-archive.md";
 
-      writeMarkdownToFile(markdownString, fileName);
+      await writeMarkdownToFile(markdownString, fileName);
     } else {
       console.log("Failed to parse JSON data.");
     }

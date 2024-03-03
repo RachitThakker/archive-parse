@@ -1,6 +1,6 @@
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+import axios from "axios";
+import fs from "fs";
+import path from "path";
 
 async function readJsonFile(url) {
   try {
