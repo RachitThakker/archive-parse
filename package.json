@@ -1,0 +1,16 @@
+{
+  "name": "archive-parse",
+  "version": "1.0.0",
+  "description": "Node.js script to generate a numbered markdown list of my favourite collection on Internet Archive (archive.org)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Rachit Thakker",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
