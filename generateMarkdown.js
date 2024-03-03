@@ -5,7 +5,7 @@ function generateMarkdown(jsonData) {
     );
   }
 
-  const listItems = jsonData.map((item) => {
+  const listItems = jsonData.map((item, index) => {
     if (
       !item.hasOwnProperty("fields") ||
       !item.fields.hasOwnProperty("identifier") ||
@@ -19,7 +19,7 @@ function generateMarkdown(jsonData) {
     const identifier = item.fields.identifier;
     const title = item.fields.title;
     const url = `https://archive.org/details/${identifier}`;
-    return `1. [${title}](${url})`;
+    return `${index + 1}. [${title}](${url})`;
   });
 
   return listItems.join("\n");
